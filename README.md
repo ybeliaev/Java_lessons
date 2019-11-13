@@ -57,4 +57,14 @@ float Num = 20.0F;
 * 10	         нет	                      95459	
 * 16	         0x в начале числа	  0x10ff
 
+*  пример работы с 16 системой счисления
+```java
+class Main {
+  public static void main(String[] args) {
+  
+    char a1 = '\u0F11';
+    System.out.println(a1);// => ༑
+  }
+}
 
+```
