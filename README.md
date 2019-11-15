@@ -80,3 +80,21 @@ class Main {
   }
 }
 ```
+```java
+class Main {
+  public static void main(String[] args) {
+  
+    int x = 1, y = 3;
+    System.out.println(x/y);// 0
+
+    double a = 11, b = 3;
+    System.out.println(a/b); // 3.6666666666666665
+
+    
+    int z = 1, c = 2;
+    int v = z + ++c;
+    System.out.println(v); // 4
+    System.out.println(c); // 3
+  }
+}
+```
