@@ -98,3 +98,15 @@ class Main {
   }
 }
 ```
+```java
+class Main {
+  public static void main(String[] args) {
+  
+    long x = 1000L;
+    int y  = x;
+    System.out.println(y);// error: incompatible types: possible lossy conversion from long to int
+
+    
+  }
+}
+```
