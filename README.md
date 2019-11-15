@@ -68,3 +68,15 @@ class Main {
 }
 
 ```
+************************************************************************************************************************************
+* Java Operators
+```java
+class Main {
+  public static void main(String[] args) {
+  //форма записи присваивания
+    int x = 1, y = 3;
+    System.out.println(x);
+    System.out.println(y);
+  }
+}
+```
