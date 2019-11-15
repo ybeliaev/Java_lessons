@@ -105,7 +105,11 @@ class Main {
     long x = 1000L;
     int y  = x;
     System.out.println(y);// error: incompatible types: possible lossy conversion from long to int
-
+  // но если
+  
+  short z = 1000;
+  int c = z;
+  System.out.println(c); // 1000, т.к int -> short
     
   }
 }
