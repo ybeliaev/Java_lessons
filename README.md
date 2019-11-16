@@ -114,3 +114,18 @@ class Main {
   }
 }
 ```
+* Bitwise operators
+```java
+class Main {
+  public static void main(String[] args) {
+  
+    int x = 10;
+    int y = 20;
+    boolean c = x!=y || ++y > x;
+    // операция НЕ дойдёт до правой части сравнения
+    // НО если bitwise operators ( | или & )то исполнится вся строка и y будет равен 21
+    System.out.println(y);
+    System.out.println(c);
+  }
+}
+```
