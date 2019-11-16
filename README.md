@@ -132,5 +132,20 @@ class Main {
 * System.out.println(10 & 6); результат = 2
 * 1010 10 в 2 системе
 * 0110 6 в 2 системе
-* _____
+* -----
 * 0010 это 2 
+* System.out.println(10 & 6); результат = 1110это 14
+******************************************************
+* XOR
+```java
+class Main {
+  public static void main(String[] args) {
+  
+    boolean a1 = true;
+    boolean a2 = false;
+    boolean a3 = false;
+    System.out.println(a1^a2^a3); // true т.к ОДИН операнд true
+    
+  }
+}
+```
