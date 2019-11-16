@@ -124,7 +124,7 @@ class Main {
     boolean c = x!=y || ++y > x;
     // операция НЕ дойдёт до правой части сравнения
     // НО если bitwise operators ( | или & )то исполнится вся строка и y будет равен 21
-    System.out.println(y);
+    System.out.println(y); // y равен 20
     System.out.println(c);
   }
 }
