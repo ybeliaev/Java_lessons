@@ -156,3 +156,26 @@ char x = 'a';
  int y = 10;
     System.out.println(x + y); // будет 97 + 10 = 107
 ```
+**************************************************
+* Создание класса
+Класс - reference data type (ссылочный тип данных)
+```java
+class BankAccount {
+  int id;
+  String name;
+  double balance;
+  public static void main(String[] args) {
+    BankAccount MyAccount = new BankAccount(); // BankAccount есть типом данных для переменной MyAccount
+    // new BankAccount() - вызов конструктора, создание нового объекта
+    BankAccount YourAccount = new BankAccount();
+    
+    MyAccount.id = 1;
+    MyAccount.name = "Jorgen";
+    MyAccount.balance = 17.35;
+    
+    
+    System.out.println(MyAccount); 
+    
+  }
+}
+```
