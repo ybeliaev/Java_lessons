@@ -1,7 +1,7 @@
 # Java_lessons
 ```java
 
-class Main {
+public class Main {
   public static void main(String[] args) {
     byte Num = 130;
     System.out.println(Num);
@@ -15,7 +15,7 @@ compiler exit status 1
 */
 
 *****************************************************
-class Main {
+public class Main {
   public static void main(String[] args) {
     byte Num = 10000000000000;
 
@@ -30,7 +30,7 @@ compiler exit status 1
 Это потому что по-умолчанию числу присваиваетмя тип int, а значение больше возможного для этого типа
 */
 // Так верно:
-class Main {
+public class Main {
   public static void main(String[] args) {
     long Num = 10000000000000L;
 
@@ -59,7 +59,7 @@ float Num = 20.0F;
 
 *  пример работы с 16 системой счисления
 ```java
-class Main {
+public class Main {
   public static void main(String[] args) {
   
     char a1 = '\u0F11';
@@ -71,7 +71,7 @@ class Main {
 ************************************************************************************************************************************
 * Java Operators
 ```java
-class Main {
+public class Main {
   public static void main(String[] args) {
   //форма записи присваивания
     int x = 1, y = 3;
@@ -81,7 +81,7 @@ class Main {
 }
 ```
 ```java
-class Main {
+public class Main {
   public static void main(String[] args) {
   
     int x = 1, y = 3;
@@ -99,7 +99,7 @@ class Main {
 }
 ```
 ```java
-class Main {
+public class Main {
   public static void main(String[] args) {
   
     long x = 1000L;
@@ -116,7 +116,7 @@ class Main {
 ```
 * Bitwise operators
 ```java
-class Main {
+public class Main {
   public static void main(String[] args) {
   
     int x = 10;
@@ -138,7 +138,7 @@ class Main {
 ******************************************************
 * XOR
 ```java
-class Main {
+public class Main {
   public static void main(String[] args) {
   
     boolean a1 = true;
@@ -160,7 +160,7 @@ char x = 'a';
 * Создание класса
 Класс - reference data type (ссылочный тип данных)
 ```java
-class BankAccount {
+public class BankAccount {
   int id;
   String name;
   double balance;
@@ -194,7 +194,7 @@ class Main {
 * Может быть только один public класс, но много других
 ```java
 package MyPack
-class Main {
+public class Main {
   public static void main(String[] args) {  
     
     System.out.println(); 
@@ -207,18 +207,93 @@ class Main {
 * Про точку входа. Она должна быть обязательно иначе код невыполним 
 ```java
 package MyPack
-class Main {
+public class Main {
   public static void main(String[] args) {      
-    System.out.println(); 
-    
+    System.out.println();     
   }
+ }
   class Too {
     public static void main(String[] args) {      
     System.out.println();     
     }
   }
   
-}
 // IDE вначале спросит какой класс исполнить, т.к есть ДВЕ точки входа main исполнив которую произойдёт выход
 ```
+* Дефолтные значения типов данных (т.е сущность инициализированна, но значения не задано)
+* byte, shot, int, long = 0
+* float, double = 0.0
+* char = 0 или '/u0000' где 0 - порядковый номер символа
+* boolean = false
+* Это было для примитивов. Для Reference это всегда ``` null ``` String туда же
+***********************************************************************
+* Instance variable
+```java
+class BankAccount {
+  // id, name, balance - instance variable. Вызвать их в методе main как обычный примитив нельзя - они свойство класса
+  int id;
+  String name;
+  double balance;
+  public static void main(String[] args) {
+    BankAccount MyAccount = new BankAccount(); 
+    BankAccount YourAccount = new BankAccount();
+    
+    MyAccount.id = 1;
+    MyAccount.name = "Jorgen";
+    MyAccount.balance = 17.35;
+    
+    
+    System.out.println(MyAccount.id); 
+    
+  }
+}
+```
+******************************************
+* Шаблон класса
+```java
+// class BankAccount в роли шаблона
+public class BankAccount {
+  int id;
+  String name;
+  double balance;
+  
+}
+class MakeAccount {
+  public static void main(String[] args) {
+    BankAccount MyAccount = new BankAccount(); 
+    BankAccount YourAccount = new BankAccount();
+    
+    MyAccount.id = 1;
+    MyAccount.name = "Jorgen";
+    MyAccount.balance = 17.35;    
+    
+    System.out.println(MyAccount.id); 
+    
+  }
 
+}
+```
+*************************************************
+* Дефолтные значения
+```java
+public class BankAccount {
+  int id = 10;
+  String name = "Аноним";
+  double balance = 100;
+  
+}
+class MakeAccount {
+  public static void main(String[] args) {
+    BankAccount MyAccount = new BankAccount(); 
+    BankAccount YourAccount = new BankAccount();
+    
+    MyAccount.id = 1;
+    MyAccount.name = "Jorgen";
+    MyAccount.balance = 17.35;    
+    
+    System.out.println(MyAccount.id); 
+    
+  }
+
+}
+```
