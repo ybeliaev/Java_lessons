@@ -179,3 +179,15 @@ class BankAccount {
   }
 }
 ```
+* Название файла и класса в нём всегда одно и то же
+В пакете MyPack файл Main.java
+```java
+package MyPack
+class Main {
+  public static void main(String[] args) {  
+    
+    System.out.println(); 
+    
+  }
+}
+```
