@@ -180,7 +180,7 @@ class BankAccount {
 }
 ```
 * Название файла и класса в нём всегда одно и то же
-В пакете MyPack файл Main.java
+* В пакете MyPack файл Main.java
 ```java
 package MyPack
 class Main {
@@ -191,3 +191,34 @@ class Main {
   }
 }
 ```
+* Может быть только один public класс, но много других
+```java
+package MyPack
+class Main {
+  public static void main(String[] args) {  
+    
+    System.out.println(); 
+    
+  }
+  class Too {}
+  class More {}
+}
+```
+* Про точку входа. Она должна быть обязательно иначе код невыполним 
+```java
+package MyPack
+class Main {
+  public static void main(String[] args) {      
+    System.out.println(); 
+    
+  }
+  class Too {
+    public static void main(String[] args) {      
+    System.out.println();     
+    }
+  }
+  
+}
+// IDE вначале спросит какой класс исполнить, т.к есть ДВЕ точки входа main исполнив которую произойдёт выход
+```
+
